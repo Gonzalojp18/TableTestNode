@@ -1,0 +1,171 @@
+***Design Systems
+History: Interface attribute is
+-Behaviour
+-Appearance
+-Structure
+-Logic
+-Layout
+-Style
+
+Encapsulations:
+Components based Architecture
+Components:
+-Logic
+-Styles
+-Layout
+
+Hacer capas horizontales. Todo lo que compone una interfaces.
+Que sean componentes.
+
+Atomic Design: Toda interfaces se puede dividir en different
+combinaciones de elementos
+Atoms primera capa hoja de nuestra. Juntas hacen
+Molecules = componente de busqueda
+Organisms = Nav combinado con molecula
+Templates = Estructura preparada para ser instanciada en diferentes paginas
+combinacion de organismos.
+Pages. Combina todos los elementos.
+
+
+
+***Modern js
+
+Identifier:
+let = extLet = 1;
+var extrVar = 1;
+    if(true){
+        let intLet = 1;
+        var intVar = 1;
+    }
+
+
+-Arrow function
+
+
+function doble (a){
+    return a * 2;
+}
+
+const double = a => a*2;
+
+const suma = (a, b) => a + b;
+
+const factorial = a => {
+    if (a <= 1) {
+        return 1;
+    }
+    return a *factorial (a-1);
+}
+
+-String literals:
+const libs = ['react', 'vue', 'angular']
+
+console.log(`this course is about ${libs[0]}`);
+
+const num = libs.length;
+console.log(`${num > 1 ? `these ${num} libraries`: 'this library'} : ${libs.join(',')}... `);
+
+-Destructuring:
+
+const user = {
+    name: 'gonzalo',
+    surname: 'palomo',
+    learning: ['js', 'react'];
+};
+
+const getFullName = ({name, surname}) => `${name} ${surname}`;
+console.log('gettFullName: ' getFullName(user));
+
+const newUser = {
+    ...user,
+    name; 'Fernando'
+}
+
+-Classes:
+
+
+-Modules:
+
+palabra clave export, cada fichero puede tener solo un export por default
+pero puede tener tantos export nombrados; como sean necesarios.
+
+
+export const hello = () => 'hello';
+
+export default class Myclass{
+    goodbye(){
+        return 'goodbye';
+    }
+}
+
+
+***React Anatomy
+
+Reconcialiation: como suele comportarse en el navegador
+el tratamiento del DOM.
+Existe conexion directa entre el navegador y el html.
+
+Virtual DOM: Se apoya en una estructura complementaria al DOM
+nativo.  Es una copia exacta del DOM nativo.
+
+Renderization:
+
+***React Ecosystem
+
+React DOM
+React Router
+State Management = Redux
+Forms = Formik
+Tests = Jest => Desarrollada por facebook
+Bundling; empaquetado = Parcel
+
+--save react = guarda info de react.
+
+yarn.lock = capacidad de instalar paquetes.
+
+Herramientas de empaquetado.
+
+
+declaracion de variables con var, let y const
+
+template literals
+´${nombre}
+${edad}´
+
+function expresion 
+
+const ejercicio = function(){
+    console.log('hola');
+}
+ejercicio();
+
+parametros por defectos:
+
+const ejercicio = function(nombre = 'Gonzalo', actividad = 'programador'){
+    console.log(`mi nombre es ${nombre}, mi profesión es ${actividad}`);
+}
+
+ejercicio();
+
+arraw function:
+
+
+const ejercicioDos = (nombre) => {
+    return ´Hola muchacho: ${nombre}´
+}
+
+ejercicioDos('pedro');
+
+console.log(ejercicioDos('pedro'))
+
+Interpolacion:
+
+
+
+
+
+
+
+
+
+
